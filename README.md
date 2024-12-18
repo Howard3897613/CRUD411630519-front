@@ -1,6 +1,7 @@
 # StudentHub 專案
 這是一個基於MVC架構、前後端分離的專案。具備完整 CRUD 功能的全端應用程式，整合前端與後端，並串接資料庫進行資料操作。
 前端網址：https://github.com/Howard3897613/CRUD411630519-front
+後端網址：https://github.com/Howard3897613/CRUD411630519-end
 ### 功能
 * Create: 新增資料 insertOne
 * Read: 查詢資料 findAll
