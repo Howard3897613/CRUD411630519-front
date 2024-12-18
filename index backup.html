@@ -48,7 +48,7 @@
       // 初始化時獲取學生數據
       async function fetchStudents() {
         try {
-          const response = await fetch('http://127.0.0.1:2083/api/v1/user/findAll');
+          const response = await fetch('http://localhost:3001/api/students');
           const data = await response.json();
           if (data.code === 200) {
             students = data.body.map(student => ({
@@ -70,8 +70,8 @@
       }
   
       function readStudent() {
-        const studentsLists = document.getElementById("studentsLists");
-        studentsLists.innerHTML = "";
+        const studentsList = document.getElementById("studentsList");
+        studentsList.innerHTML = "";
   
         students.forEach(student => {
           const row = document.createElement("tr");
@@ -89,7 +89,7 @@
               <button onclick="deleteStudent('${student.id}')">刪除</button>
             </td>
           `;
-          studentsLists.appendChild(row);
+          studentsList.appendChild(row);
         });
       }
   
