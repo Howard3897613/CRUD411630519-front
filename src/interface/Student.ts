@@ -19,7 +19,7 @@ export interface Student {
     /**
      * 院系
      */
-    department: string;
+    departmant: string;
 
     /**
      * 年級
@@ -34,7 +34,7 @@ export interface Student {
     /**
      * Email
      */
-    email: string;
+    Email: string;
 
     /**
      * 缺席次數

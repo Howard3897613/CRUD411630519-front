@@ -48,7 +48,7 @@
       // 初始化時獲取學生數據
       async function fetchStudents() {
         try {
-          const response = await fetch('http://localhost:3001/api/students');
+          const response = await fetch('http://127.0.0.1:2083/api/v1/user/findAll');
           const data = await response.json();
           if (data.code === 200) {
             students = data.body.map(student => ({

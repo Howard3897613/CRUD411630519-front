@@ -51,3 +51,26 @@ export async function asyncPatch(api: string, body: {} | FormData) {
         console.error(error)
     }
 }
+
+export async function asyncDelete(api: string) {
+    try {
+        const res: Response = await fetch(api, {
+            method: 'DELETE',
+            credentials: 'include',
+            headers: new Headers({
+                'Access-Control-Allow-Origin': "http://localhost:5173/",
+                'content-Type': "application/json"
+            }),
+            mode: "cors"
+        })
+        try {
+            let data = await res.json()
+            return data
+        } catch (error) {
+            return error
+        }
+    } catch (error) {
+        console.error(error)
+        return error
+    }
+}
